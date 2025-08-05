@@ -1,0 +1,36 @@
+{
+	"id": "testbildmedia-stgtime",
+	"name": "testbildmedia-stgtime",
+	"shortname": "STGTIME",
+	"description": "Bitfocus Companion Modul for STGTIME",
+	"version": "0.0.2",
+	"license": "MIT",
+	"repository": "git+https://github.com/bitfocus/companion-module-testbildmedia-stgtime.git",
+	"bugs": "https://github.com/bitfocus/companion-module-testbildmedia-stgtime/issues",
+	"maintainers": [
+		{
+			"name": "testbild.media",
+			"email": "kuhr@testbildmedia.de"
+		},
+		{
+			"name": "Jason Kuhr",
+			"email": "kuhr@testbildmedia.de"
+		}
+	],
+	"legacyIds": [],
+	"runtime": {
+		"type": "node22",
+		"api": "nodejs-ipc",
+		"apiVersion": "0.0.0",
+		"entrypoint": "../index.js"
+	},
+	"manufacturer": "testbild.media",
+	"products": [
+		"STGTIME"
+	],
+	"keywords": [
+		"Countdown",
+		"Timer",
+		"Clock"
+	]
+}
