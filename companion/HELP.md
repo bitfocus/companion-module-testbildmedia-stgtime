@@ -1,41 +1,28 @@
-## testbild.media <strong>STGTIME</strong>
+## STGTIME
 
-<strong>STGTIME</strong> (stands for Stage-Timer) is a Raspberry Pi based Timer/Countdown with 64x32 HUB75 Display and options to show a Videotimer from any source over Companion Triggers!
+This module controls a STGTIME stage timer through its REST API.
 
-**Available Actions**
-* Set Display Brightness
-* Time/Clock set Color
-* Timer Actions (Start/Stop/Toggle/Reset)
-* Timer set Colors (Base/Warning/Ending Color & Blanking)
-* Timer set Time (Set/Jog)
-* Timer set Timings for Colors (Warning/Ending Time)
-* Video set Colors (Base/Warning/Ending Color & Blanking)
-* Video set Time (Remaining/Total)
-* Video set Timings for Colors (Warning/Ending Time)
-* Video Timer Visible (Show/Hide/Toggle)
+### Setup
 
-**Available Feedback**
-* Display Live View
-* Timer set Time compare
-* Timer running
-* Timer stopped
-* Video Timer Visible
+Enter the STGTIME hostname or IP address, HTTP port, and device API token. The token is shown in **System → API → Show token** in the STGTIME Web GUI.
 
-**Available Variables**
-* Display Brightness
-* TIMER duration time in seconds
-* Timer remaining time in HH:MM:SS
+The module polls live state and exposes timer, message, video, display, and device variables. A 500 ms polling interval is recommended.
 
-**Available Presets**
-* Timer Toggle (with Feedback)
-* Timer Start/Stop/Reset
-* Timer Jog (-60s, -10s, +10s & +60s)
-* Timer set Time (5, 10, 15, 20, 30, 45 & 60min. with Feedback)
-* Video Timer Visible Toggle (with Feedback)
-* Display Brightness (-10% & +10%)
-* Live Image Viewer
+The **Live display image** feedback and matching layered preset show the same pixel-exact 64×32 framebuffer used by the Web GUI. The timer toggle and the separate live-time indicator are independent presets; the indicator is red while stopped and green while running.
 
-For Video Timer you have to set Duration Time (Total Length of Video) and the Remaining Time, because the Server is calculating the Progressbars himself.
+The supplied button presets use Companion 5 layered graphics so that each regular button contains only a background and text layer, while the live display contains only an image layer.
 
-- Bug Reports -> [git bitfocus/companion-module-testbildmedia-stgtime/issues](https://github.com/bitfocus/companion-module-testbildmedia-stgtime/issues)
-- Wiki & Device Infos -> [git testbild-media/stgtime](https://github.com/testbild-media/stgtime)
+### Actions
+
+- Start, stop, toggle, and reset the timer
+- Select countdown or stopwatch mode
+- Set or adjust time and configure overtime
+- Set timer thresholds, colors, and end blinking
+- Load presets stored on STGTIME
+- Set or show/hide the message area
+- Send generic video remaining-time data from vMix, VLC, ProPresenter, or another Companion connection; text and time fields accept Companion variables
+- Change brightness, clock visibility/color, and time format
+
+### Security
+
+The API token is used only for requests to the configured STGTIME. Password, network, and software-update functions are intentionally not exposed as Companion actions.
