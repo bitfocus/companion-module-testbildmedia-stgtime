@@ -1,6 +1,6 @@
 {
 	"name": "stgtime",
-	"version": "1.0.0-beta",
+	"version": "1.0.1-beta",
 	"description": "Bitfocus Companion module for STGTIME stage timers",
 	"main": "dist/main.js",
 	"type": "module",
