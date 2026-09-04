@@ -1,1 +1,24 @@
-{"$schema":"../node_modules/@companion-module/base/assets/manifest.schema.json","type":"connection","id":"testbildmedia-stgtime","name":"STGTIME","shortname":"STGTIME","description":"Control and monitor a STGTIME stage timer","version":"1.0.0-beta","isPrerelease":true,"license":"MIT","repository":"git+https://github.com/testbild-media/STGTIME.git","bugs":"https://github.com/testbild-media/STGTIME/issues","maintainers":[{"name":"Jason Kuhr"}],"runtime":{"type":"node22","api":"nodejs-ipc","apiVersion":"2.1.3","entrypoint":"../main.js"},"legacyIds":["stgtime"],"manufacturer":"testbild.media","products":["STGTIME"],"keywords":["timer","stage timer","countdown","stopwatch","HUB75"]}
+{
+	"$schema": "../node_modules/@companion-module/base/assets/manifest.schema.json",
+	"type": "connection",
+	"id": "testbildmedia-stgtime",
+	"name": "STGTIME",
+	"shortname": "STGTIME",
+	"description": "Control and monitor a STGTIME stage timer",
+	"version": "1.0.0-beta",
+	"isPrerelease": true,
+	"license": "MIT",
+	"repository": "git+https://github.com/testbild-media/STGTIME.git",
+	"bugs": "https://github.com/testbild-media/STGTIME/issues",
+	"maintainers": [{ "name": "Jason Kuhr" }],
+	"runtime": {
+		"type": "node22",
+		"api": "nodejs-ipc",
+		"apiVersion": "2.1.3",
+		"entrypoint": "../dist/main.js"
+	},
+	"legacyIds": ["stgtime"],
+	"manufacturer": "testbild.media",
+	"products": ["STGTIME"],
+	"keywords": ["timer", "stage timer", "countdown", "stopwatch", "HUB75"]
+}
