@@ -5,7 +5,7 @@
 	"name": "STGTIME",
 	"shortname": "STGTIME",
 	"description": "Control and monitor a STGTIME stage timer",
-	"version": "1.0.0-beta",
+	"version": "1.0.2-beta",
 	"isPrerelease": true,
 	"license": "MIT",
 	"repository": "git+https://github.com/testbild-media/STGTIME.git",
